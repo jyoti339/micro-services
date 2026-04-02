@@ -9,6 +9,7 @@ public class FallbackController {
 
     @GetMapping("/employeeServiceFallback")
     public Mono<String> employeeFallbackMethod(){
+    	System.out.println("NITIN");
         return Mono.just("Employee Service is down. Please try again later.");
     }
 
