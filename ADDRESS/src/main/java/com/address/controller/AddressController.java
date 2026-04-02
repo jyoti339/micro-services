@@ -30,6 +30,7 @@ public class AddressController {
     @PostMapping("/save")
     public ResponseEntity<List<AddressDto>> saveAddress(@RequestBody AddressRequest addressDto) {
         List<AddressDto> response = addressService.saveAddress(addressDto);
+        System.out.println("hello ");
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
